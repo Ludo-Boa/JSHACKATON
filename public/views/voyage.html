@@ -1,0 +1,142 @@
+<div class="container">
+	<div class="row">
+		
+		<div class="col-md-offset-2 col-md-8 boxConnectHoli">
+
+			<h2>Préparer son voyage</h2>
+			<hr>
+		<div class="container col-md-12 boxScroll">
+			<div class="row">
+
+			<div class="">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label>Nom du voyage</label>
+					<input type="text" class="form-control" id="inputNameHoli" placeholder="Nom du voyage" ng-model="nameHoli" ng-required="true">
+				</div>
+				<div class="form-group">
+					<label>Destination</label>
+					<input type="text" class="form-control" id="inputDestHoli" placeholder="Destination" ng-model="destHoli" ng-required="true">
+				</div>
+				<div class="form-group">
+					<label>Date de départ</label>
+					<input type="date" class="form-control" id="inputDateHoli" placeholder="Date de départ" ng-model="dateHoli" ng-required="true">
+				</div>
+				<div class="form-group">
+					<label>Nombre de jours</label>
+					<input type="number" class="form-control" id="inputDayHoli" placeholder="Nombre de jours" ng-model="dayHoli" ng-required="true">
+				</div>
+
+				<hr>
+				<h3>Groupe d'amis</h3>
+				<hr>
+					<form>
+				    	<div class="form-group">
+					      <label for="inputName">Prénom</label>
+					      <input type="text" class="form-control" id="inputFirstnameFriend" ng-model="firstnameFriend"
+					      placeholder="Prénom">
+					   </div>
+				    	<div class="form-group">
+					      <label for="inputName">Nom</label>
+					      <input type="text" class="form-control" id="inputLastnameFriend" ng-model="lastnameFriend"
+					      placeholder="Nom">
+					   </div>
+					   <div class="form-group">
+					      <label for="inputName">Email</label>
+					      <input type="text" class="form-control" id="inputEmailFriend" ng-model="emailFriend"
+					      placeholder="Email">
+					   </div>
+				   	<input type="submit" class="btn btn-default" value="Ajouter" ng-click="add()" />
+					</form>
+
+				<hr>
+				<h3>Budget & Dépenses</h3>
+				<hr>
+					<div class="col-md-12">
+
+						<h3>Budget</h3>
+							<div class="form-group">
+								<input type="text" class="form-control" id="inputDateHoli" placeholder="Mon Budget" ng-model="budget" ng-required="true">
+								<button type="submit" class="btn btn-default" ng-click="add()">Ajouter</button>
+							</div>
+
+						<h3>Transport</h3>
+						<div class="form-group">
+						   <label for="type1">Type de transport</label>
+						   <select class="form-control" id="type1">
+						    	<option>Avion</option>
+						    	<option>Bateau</option>
+						    	<option>Location d'un véhicule</option>
+						    	<option>Taxi</option>
+						    	<option>Transport en commun</option>						    	
+						   </select>
+						</div>
+					      <label for="inputTransport">Prix</label>
+					      <input type="text" class="form-control" id="inputTransport"
+					      placeholder="Prix - €" ng-model="prix1" ng-required="true">
+					   
+					   <button type="submit" class="btn btn-default" ng-click="add()">Ajouter</button>
+					</div>
+
+					<div class="col-md-12">
+						<h3>Logement</h3>
+						<div class="form-group">
+						   <label for="type2">Type de Logement</label>
+						   <select class="form-control" id="type2">
+						    	<option>Camping</option>						    	
+						    	<option>Hotel</option>
+						    	<option>Location d'appartement</option>
+						    	<option>Location de maison / chalet</option>
+						    	<option>Location d'une chambre</option>
+						   </select>
+						</div>
+					      <label for="inputLoc">Prix</label>
+					      <input type="text" class="form-control" id="inputLoc"
+					      placeholder="Prix - €" ng-model="prix2" ng-required="true">
+					   
+					   <button type="submit" class="btn btn-default" ng-click="add()">Ajouter</button>
+					</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="box" ng-repeat="user in users">
+				  	<h4>{{user.nameHoli}}<br>
+				 	à {{user.destHoli}}<br>
+				  	Départ :{{user.dateHoli | date: 'dd/MM/yyyy'}}<br>
+				  	Nb de jours: {{user.dayHoli}}</h4>
+				  	<hr>
+
+				  	<h3>Avec mes amis</h3>
+				  	<div class="inline" ng-repeat="user in users">
+						<h4>{{user.firstnameFriend}} {{user.lastnameFriend}}</h4><button class="btn btn-link" title="Supprimer" ng-click="delete(friend._id)"><span class="glyphicon glyphicon-remove"></span></button>
+					</div>
+					<hr>
+					
+					<div class="col-md-12">
+					  	<h3>coût du voyage</h3>
+						  		<h4>{{user.budget}}</h4>
+						<div ng-repeat="user in users"">
+						  	<div class="inline">
+								<h4>Location d'un véhicule </h4><br><h4 class="price">{{user.prix1}}</h4><button class="btn btn-link" title="Supprimer" ng-click="delete()"><span class="glyphicon glyphicon-remove"></span></button>
+							</div>
+								<div class="inline">
+								<h4>Location d'un appartement </h4><br>
+								<h4 class="price">{{user.prix2}}</h4><button class="btn btn-link" title="Supprimer" ng-click="delete()"><span class="glyphicon glyphicon-remove"></span></button>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<h4 class="total">TOTAL: {{ getTotal() }} </h4>
+
+
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+
+		</div><!-- /.boxConnect -->
+		
+
+	</div><!-- /.row -->
+</div><!-- /.container -->

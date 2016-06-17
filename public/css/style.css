@@ -1,0 +1,113 @@
+body{
+    padding-top: 70px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+  
+.navbar-brand {
+	font-family: 'Permanent Marker', cursive;
+	font-size: 2rem;
+	color: #fff !important;
+}
+h1 {
+	font-family: 'Permanent Marker', cursive;
+	font-size: 8rem;
+	text-align: center;
+	color: #fff;
+}
+hr {
+	color: #333;
+}
+.boxConnect {
+	background-color: rgba(255,255,255,0.5);
+	padding: 25px;
+	border-radius: 5px;
+	position: relative;
+	top: 100px;
+	margin-bottom: 50px;
+}
+.boxConnect h2 {
+	font-family: 'Permanent Marker', cursive;
+	font-size: 3rem;
+	text-align: center;
+	color: #333;
+}
+.boxConnect h3 {
+	font-family: 'Permanent Marker', cursive;
+	font-size: 2rem;
+	text-align: center;
+	color: #333;
+}
+.boxConnect .btn-link {
+	color: #333;
+	font-weight: bold;
+	font-size: 2rem;
+}
+.box {
+	padding: 10px;
+	border: 1px solid #333;
+	border-radius: 5px;
+	margin-top: 25px;
+}
+.box .btn-danger {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+}
+.boxScroll {
+	height: 420px;
+	overflow-y: scroll;
+}
+.boxConnectHoli {
+	background-color: rgba(255,255,255,0.5);
+	padding: 25px;
+	border-radius: 5px;
+	position: relative;
+	top: 100px;
+	margin-bottom: 50px;
+	height: 582px;
+}
+.boxConnectHoli h2 {
+	font-family: 'Permanent Marker', cursive;
+	font-size: 3rem;
+	text-align: center;
+	color: #333;
+}
+.boxConnectHoli h3 {
+	font-family: 'Permanent Marker', cursive;
+	font-size: 2rem;
+	text-align: center;
+	color: #333;
+}
+.boxConnectHoli .btn {
+	margin: 5px;
+}
+.box h4 {
+	font-weight: bold;
+	color: #333;
+}
+.inline {
+	text-align: center;
+}
+.inline h4 {
+	display: inline-block;
+}
+.inline .glyphicon-remove {
+	color: red;
+}
+.card {
+	background-color: #e2e0e0;
+	padding-left: 0;
+	padding-right: 0;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+.card-deck-wrapper img {
+	width: 100%;
+	height: 185px;
+	border-radius: 5px 5px 0 0;
+}
+.card-block {
+	padding: 10px;
+}
