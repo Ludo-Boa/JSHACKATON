@@ -46,7 +46,7 @@
 					      <input type="text" class="form-control" id="inputEmailFriend" ng-model="emailFriend"
 					      placeholder="Email">
 					   </div>
-				   	<input type="submit" class="btn btn-default" value="Ajouter" ng-click="add()" />
+				  
 					</form>
 
 				<hr>
@@ -75,7 +75,7 @@
 					      <input type="text" class="form-control" id="inputTransport"
 					      placeholder="Prix - €" ng-model="prix1" ng-required="true">
 					   
-					   <button type="submit" class="btn btn-default" ng-click="add()">Ajouter</button>
+					  
 					</div>
 
 					<div class="col-md-12">
@@ -95,6 +95,8 @@
 					      placeholder="Prix - €" ng-model="prix2" ng-required="true">
 					   
 					   <button type="submit" class="btn btn-default" ng-click="add()">Ajouter</button>
+					   <button type="submit" class="btn btn-warning" ng-click="update()">Modifier</button>
+					   <button type="submit" class="btn btn-danger" ng-click="delete()">Supprimer</button>
 					</div>
 			</div>
 

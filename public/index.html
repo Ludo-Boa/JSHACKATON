@@ -23,9 +23,13 @@
     <script src="js/controllers/mainController.js"></script>
     <script src="js/controllers/voyageController.js"></script>
     <script src="js/controllers/historiqueController.js"></script>
+    <script src="js/controllers/roadController.js"></script>
+
+
     <script src="js/services/todoService.js"></script>
     <script src="js/services/historiqueService.js"></script>
     <script src="js/services/voyageService.js"></script>
+    <script src="js/services/roadService.js"></script>
     
     <script src="js/app.js"></script>
     </head>
@@ -38,6 +42,7 @@
             <ul class="nav navbar-nav">
                 <a href="#/" class="navbar-brand">Holi-Friends</a>
                 <li ng-class="{active: activetab=='/voyage'}"><a href="#/voyage">Préparer Son Voyage</a></li>
+                <li ng-class="{active: activetab=='/road'}"><a href="#/road">Mon Voyage</a></li>
                 <li ng-class="{active: activetab=='/historique'}"><a href="#/historique">Historique</a></li>
             </ul>
             <ul class="nav navbar-nav pull-right">

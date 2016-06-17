@@ -3,10 +3,6 @@ function voyageController ($scope, $window, voyageService) {
 
 	
 
-	$scope.getTotal = function(){
-    var total = 0;
-    }
-
 	function load (){
 		voyageService.findAll().then(function(res){
 			$scope.users = res.data;

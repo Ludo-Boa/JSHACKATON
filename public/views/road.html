@@ -1,0 +1,32 @@
+
+<div class="container">
+	<div class="row">
+		
+		<div class="col-md-12" >
+			<div class="card-deck-wrapper" >
+			  	<div class="card-deck" >
+			  	<div class="row">
+				    <div class="card col-md-3" ng-repeat="voyage in voyages">
+				      
+				      <div class="card-block" >
+				        <h4 class="card-title">{{voyage.nameHoli}}</h4>
+				        <p class="card-text"><br>
+						 	à {{voyage.destHoli}}<br>
+						  	Départ :{{voyage.dateHoli | date: 'dd/MM/yyyy'}}<br>
+						  	Nb de jours: {{voyage.dayHoli}}</p>
+						  	<hr>
+						<h4 class="card-title">Avec :</h4>
+					  	<p class="card-text">
+					  	{{voyage.firstnameFriend}} {{voyage.lastnameFriend}}</p>
+					  	<hr>
+					  	<h4 class="card-title">Mon Budget :</h4>
+					  	<p>{{voyage.budget}}</p>
+				      </div>
+				    </div>
+				</div>
+	
+			  	</div>
+			</div>
+		</div>
+	</div>
+</div>

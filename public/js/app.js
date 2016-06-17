@@ -15,6 +15,10 @@ function config($routeProvider) {
 			templateUrl: 'views/historique.html',
 			controller: 'historiqueController'
 		})
+		.when('/road', {
+			templateUrl: 'views/road.html',
+			controller: 'roadController'
+		})
 		.otherwise({
 			redirectTo: '/'
 		});
@@ -30,9 +34,11 @@ angular.module('app', ['ngRoute'])
     .controller('mainController', mainController)
     .controller('voyageController', voyageController)
     .controller('historiqueController', historiqueController)
+    .controller('roadController', roadController)
     .service('todoService', todoService)
     .service('voyageService', voyageService)
     .service('historiqueService', historiqueService)
+    .service('roadService', roadService)
     /*.factory('', )*/
     .run(run);
 
